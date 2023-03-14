@@ -4,8 +4,12 @@ import model.Carro;
 
 public class CarroServiceImpl implements CarroService {
     @Override
-    public void acelerar(Carro carro, int velocidadeAMais) {
-        carro.setVelocidadeAtual(carro.getVelocidadeAtual() + velocidadeAMais);
+    public void acelerar(Carro carro, int velocidadeAMais, int velocidadeMaxima) {
+        if(carro.getVelocidadeAtual()+velocidadeAMais>velocidadeMaxima){
+            carro.setVelocidadeAtual(velocidadeMaxima);
+        }else{
+            carro.setVelocidadeAtual(carro.getVelocidadeAtual() + velocidadeAMais);
+        }
     }
 
     @Override

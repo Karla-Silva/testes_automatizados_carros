@@ -9,6 +9,11 @@ public class Carro {
     private int velocidadeAtual;
     private int velocidadeMaxima;
 
+    public Carro(){
+        this.ligado = false;
+        this.velocidadeAtual = 0;
+    }
+
     public Carro(String cor, String marca, String modelo, int ano, int velocidadeMaxima) {
         this.cor = cor;
         this.marca = marca;
@@ -51,7 +56,7 @@ public class Carro {
         this.ano = ano;
     }
 
-    public boolean isLigado() {
+    public boolean getLigado() {
         return ligado;
     }
 
